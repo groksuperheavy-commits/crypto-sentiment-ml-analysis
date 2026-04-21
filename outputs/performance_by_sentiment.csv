@@ -1,0 +1,6 @@
+sentiment_class,sum,mean,count
+Extreme Fear,2803.19,1.21,2326
+Fear,1763532.52,127.16,13869
+Neutral,72114.64,26.17,2756
+Greed,597290.97,52.9,11292
+Extreme Greed,1152195.68,204.98,5621

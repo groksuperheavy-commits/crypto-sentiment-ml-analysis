@@ -1,0 +1,61 @@
+=== FINAL INSIGHTS REPORT ===
+
+1. Market Regime Performance
+                        sum    mean  count
+sentiment_class                           
+Extreme Fear        2803.19    1.21   2326
+Fear             1763532.52  127.16  13869
+Neutral            72114.64   26.17   2756
+Greed             597290.97   52.90  11292
+Extreme Greed    1152195.68  204.98   5621
+
+2. Win Rate by Sentiment (%)
+sentiment_class
+Extreme Fear     28.68
+Fear             38.33
+Neutral          52.72
+Greed            45.69
+Extreme Greed    56.08
+Name: win, dtype: float64
+
+3. Position Counts
+position         Long  Other  Short
+sentiment_class                    
+Extreme Fear     1658    121    547
+Fear             6249   1791   5829
+Neutral           718   1217    821
+Greed            4513   2592   4187
+Extreme Greed    1159   2658   1804
+
+4. Average Trade Size (USD)
+sentiment_class
+Extreme Fear     4118.76
+Fear             5744.78
+Neutral          4332.20
+Greed            5051.88
+Extreme Greed    3242.09
+Name: Size USD, dtype: float64
+
+5. Daily Sentiment-PnL Correlation
+-0.0565
+
+6. Model Metrics
+Accuracy: 0.9332
+ROC-AUC: 0.9793
+
+7. Strategy Metrics
+Strategy Trades: 3312
+Strategy PnL: 15722.02
+Total PnL: 3587937.0
+Strategy Contribution %: 0.44
+
+
+=== INTERPRETED INSIGHTS ===
+- Best win-rate regime: Extreme Greed.
+- Weak daily sentiment-to-PnL correlation (-0.0565) suggests sentiment level alone is not enough.
+- Worst average-PnL regime: Extreme Fear.
+- Top trader by net PnL: 0xb1231a4a2dd02f2276fa3c5e2a2f3436e6bfed23.
+- Top coin by net PnL: @107.
+- Trade size by sentiment helps measure trader conviction.
+- Strategy logic uses a contrarian rule: Long in fear, Short in greed.
+- Model performance should be judged with ROC-AUC as well, not accuracy alone.
